@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>惠州学院气象小站</title>
+<style>
+  :root { --bg:#0f1115; --card:#171a21; --line:#262b36; --text:#e8eaed; --muted:#9aa3b2; --accent:#4aa8ff; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--text);
+         font-family: "PingFang SC","Microsoft YaHei UI","Noto Sans CJK SC",system-ui,sans-serif; }
+  header { padding:32px 20px 8px; text-align:center; }
+  h1 { margin:0 0 6px; font-size:26px; letter-spacing:1px; }
+  .sub { margin:0; color:var(--muted); font-size:13px; }
+  main { max-width:1000px; margin:0 auto; padding:20px; display:grid; gap:22px; }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:14px; overflow:hidden; }
+  .card h2 { margin:0; padding:16px 18px 4px; font-size:18px; }
+  .meta { margin:0; padding:0 18px 14px; color:var(--muted); font-size:12.5px; }
+  video { display:block; width:100%; height:auto; background:#000; }
+  footer { text-align:center; color:#68707f; font-size:12px; padding:18px 20px 40px; line-height:1.7; }
+  @media (min-width:820px) { main { grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+<header>
+  <h1>惠州学院气象小站</h1>
+  <p class="sub">自动更新 · 页面更新于 2026-11-14 23:07</p>
+</header>
+<main>
+  <section class="card">
+    <h2>惠州学院附近雷达组合反射率</h2>
+    <p class="meta">中心 23.040°N, 114.416°E · 半径 40 km · 每 6 分钟更新</p>
+    <video src="media/radar.mp4?v=1794668864" autoplay loop muted playsinline preload="auto"></video>
+  </section>
+  <section class="card">
+    <h2>ECMWF 850 hPa 温度距平（东亚）</h2>
+    <p class="meta">起报 2026-11-14 00Z UTC · 逐 3/6 小时 · 每 3 小时检查新批次</p>
+    <video src="media/ecmwf.mp4?v=1794644299&r=2026111400" autoplay loop muted playsinline preload="auto"></video>
+  </section>
+</main>
+<footer>
+  雷达数据：广东省气象局雷达拼图（http://www.tqyb.com.cn）<br>
+  模式数据：ECMWF via Tropical Tidbits（https://www.tropicaltidbits.com）<br>
+  仅供学习参考
+</footer>
+</body>
+</html>
